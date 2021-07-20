@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "react-ts-setting": [
+        "./@types"
+      ],
+      "@src/*": ["./*"],
+    },
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "target": "es2015",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "react",
+    "rootDirs": [
+      "src",
+      "stories"
+    ],
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": true,
+    "suppressExcessPropertyErrors": false,
+    "suppressImplicitAnyIndexErrors": false,
+    "noStrictGenericChecks": true,
+    "listFiles": true,
+  },
+  "include": ["src"],
+  "exclude": [
+    "../node_modules",
+    "../dist",
+  ],
+}
