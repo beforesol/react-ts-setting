@@ -3,7 +3,7 @@
     "-- 로컬 dev 실행 ----": "",
     "dev": "webpack-dev-server --config config/webpack.config.js --mode=development",
     "-- prod ----": "",
-    "prod": "rimraf static; nvm use; npm rebuild; yarn; webpack --config config/webpack.config.js --mode=production --optimize-minimize"
+    "prod": "rimraf dist; nvm use; npm rebuild; yarn; webpack --config config/webpack.config.js --mode=production --optimize-minimize"
   },
   "engines": {
     "node": ">=14.17.3"
@@ -38,7 +38,6 @@
     "@types/redux-promise": "^0.5.28",
     "@typescript-eslint/eslint-plugin": "^2.19.2",
     "@typescript-eslint/parser": "^2.19.2",
-    "@uit-spritesmith/webpack": "^0.1.0",
     "autoprefixer": "^9.7.4",
     "axios": "^0.19.2",
     "babel-loader": "^8.0.6",
@@ -70,6 +69,7 @@
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "rollup-ts-setting": "git+https://oss.navercorp.com/jeonsol/rollup-ts-setting.git"
   }
 }

@@ -7,18 +7,18 @@ module.exports = {
   mode: 'production',
   output: {
     filename: 'assets/bundle.[hash].js',
-    path: path.resolve('static'),
+    path: path.resolve('dist'),
   },
   plugins: [
     new CleanWebpackPlugin({
-      cleanAfterEveryBuildPatterns: ['static']
+      cleanAfterEveryBuildPatterns: ['dist']
     }),
     new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin(
       [
         {
           from: path.resolve(__dirname, '../../assets'),
-          to: path.resolve(__dirname, '../../static/assets')
+          to: path.resolve(__dirname, '../../dist/assets')
         }
       ]),
   ],
