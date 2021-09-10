@@ -28,7 +28,8 @@ const postCSSLoaderOptions = {
 const root = path.resolve(__dirname);
 
 module.exports = {
-  entry: ['./src/index.tsx', './assets/css/common.css'],
+  //core-js/features/object: ie 대응
+  entry: ['core-js/features/object', './src/index.tsx', './assets/css/common.css'],
   output: {
     filename: 'bundle.[hash].js',
     publicPath: '/'
@@ -45,14 +46,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
-        exclude: /node_modules/,
-        use: [{
-          loader: 'ts-loader'
-        },]
-      },
-      {
-        test: /\.(js)$/,
+        test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
         use: [{
           loader: 'babel-loader'
