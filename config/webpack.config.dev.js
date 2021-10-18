@@ -6,7 +6,9 @@ module.exports = {
   devServer: {
     port: 8888,
     hot: true,
-    historyApiFallback: true,
+    historyApiFallback: {
+      disableDotRule: true
+    },
     open: true,
     disableHostCheck: true,
     proxy: {
