@@ -6381,10 +6381,6 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-"rollup-ts-setting@git+https://oss.navercorp.com/jeonsol/rollup-ts-setting.git":
-  version "1.0.8"
-  resolved "git+https://oss.navercorp.com/jeonsol/rollup-ts-setting.git#9baa1f863c29c289048ccca708f6479c77845c34"
-
 run-async@^2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.4.1.tgz#8440eccf99ea3e70bd409d49aab88e10c189a455"
