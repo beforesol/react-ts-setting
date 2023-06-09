@@ -1,10 +1,8 @@
 require('dotenv').config();
 const webpackMerge = require('webpack-merge');
-const webpack = require('webpack');
 
 const webpackCommonConfig = require('./webpack.config.common');
 const webpackDevConfig = require('./webpack.config.dev');
-const webpackAlphaConfig = require('./webpack.config.alpha');
 const webpackProdConfig = require('./webpack.config.prod');
 
 const MODE = {
@@ -18,10 +16,7 @@ module.exports = function(env, argv) {
 
   switch (mode) {
     case MODE.DEV:
-    return webpackMerge(webpackCommonConfig, webpackDevConfig);
-
-    case MODE.ALPHA:
-	  return webpackMerge(webpackCommonConfig, webpackAlphaConfig);
+      return webpackMerge(webpackCommonConfig, webpackDevConfig);
 
     case MODE.PROD:
       return webpackMerge(webpackCommonConfig, webpackProdConfig);

@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
-// const UitSpritesmithWebpack = require('@uit-spritesmith/webpack');
 
 const commonCSSLoaderOptions = {
   importLoaders: 2,
@@ -25,11 +24,8 @@ const postCSSLoaderOptions = {
   plugins: () => [autoprefixer(),],
 };
 
-const root = path.resolve(__dirname);
-
 module.exports = {
-  //core-js/features/object: ie 대응
-  entry: ['core-js/features/object', './src/index.tsx', './assets/css/common.css'],
+  entry: ['./src/index.tsx', './assets/css/common.css'],
   output: {
     filename: 'bundle.[hash].js',
     publicPath: '/'
@@ -71,15 +67,6 @@ module.exports = {
     ]
   },
   plugins: [
-    // new UitSpritesmithWebpack({
-    //   spriteSrc: path.resolve('./assets/sprite'),
-    //   spriteDest: path.resolve('./assets/img/sprite'),
-    //   cssDest: path.resolve('./assets/scss/sprite'),
-    //   imgURL: '/assets/img/sprite',
-    //   prefix: 'sp_',
-    //   ratio: 3,
-    //   padding: 3,
-    // }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),

@@ -15,6 +15,6 @@ export const routes = [
   {
     ...ROUTE_PATH.HOME,
     exact: true,
-    component: lazy(() => import('@src/pages/Home.tsx')),
+    component: lazy(() => import('@src/pages/Home')),
   },
 ];
