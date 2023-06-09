@@ -7,7 +7,6 @@ const webpackProdConfig = require('./webpack.config.prod');
 
 const MODE = {
   DEV: 'development',
-  ALPHA: 'none',
   PROD: 'production',
 };
 
