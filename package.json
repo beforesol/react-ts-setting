@@ -6,7 +6,7 @@
     "prod": "rimraf dist; nvm use; npm rebuild; yarn; webpack --config config/webpack.config.js --mode=production --optimize-minimize"
   },
   "engines": {
-    "node": ">=14.17.3"
+    "node": ">=16.18.0"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
