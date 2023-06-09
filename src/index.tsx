@@ -1,30 +1,33 @@
-import React, { Suspense } from 'react';
-import ReactDOM from 'react-dom';
-import { Switch, BrowserRouter, Route } from 'react-router-dom';
+import React, { Suspense, StrictMode } from 'react';
+import ReactDOM from 'react-dom/client';
+import { Routes, BrowserRouter, Route } from 'react-router-dom';
 import { routes } from './routes';
 import { Provider } from 'react-redux';
 import store from './config/store';
 import Loading from '@src/components/Loading';
 
-const App = () => {
-  return (
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+root.render(
+  <StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
-          <Suspense fallback={<Loading />}>
-            <Switch>
-              {routes.map((route, index) =>
+      <Suspense fallback={<Loading />}>
+        <BrowserRouter>
+          <Routes>
+            {routes.map((route, index) => {
+              const Component = route.component;
+
+              return (
                 <Route
                   key={index}
-                  exact={route.exact}
                   path={route.path}
-                  component={route.component}
+                  element={<Component />}
                 />
-              )}
-            </Switch>
-          </Suspense>
-      </BrowserRouter>
+              );
+            })}
+          </Routes>
+        </BrowserRouter>
+      </Suspense>
     </Provider>
-  );
-};
+  </StrictMode>,
+);
 
-ReactDOM.render(<App />, document.getElementById('root'));
