@@ -25,7 +25,7 @@ const postCSSLoaderOptions = {
 };
 
 module.exports = {
-  entry: ['./src/index.tsx', './assets/css/common.css'],
+  entry: ['./src/index.tsx', './src/assets/css/common.css'],
   output: {
     filename: 'bundle.[hash].js',
     publicPath: '/'

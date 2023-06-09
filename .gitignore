@@ -2,11 +2,7 @@
 .idea
 .DS_Store
 **/node_modules/
-**/assets/img/sprite/*
-**/assets/scss/sprite/*
 
 .vscode/
 
 .history
-
-/static

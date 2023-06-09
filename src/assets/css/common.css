@@ -40,9 +40,7 @@ html,
 body,
 #app {
   height: 100%;
-  background-color: #000;
   -webkit-text-size-adjust: none;
-  font-family: '-apple-system', 'AppleSDGothicNeo', 'SFProDisplay', 'BlinkMacSystemFont', 'HelveticaNeue', 'Helvetica', arial, 'sans-serif';
 }
 
 address,

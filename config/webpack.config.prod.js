@@ -6,7 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   mode: 'production',
   output: {
-    filename: 'assets/bundle.[hash].js',
+    filename: 'static/bundle.[hash].js',
     path: path.resolve('dist'),
   },
   plugins: [
@@ -17,8 +17,8 @@ module.exports = {
     new CopyWebpackPlugin(
       [
         {
-          from: path.resolve(__dirname, '../../assets'),
-          to: path.resolve(__dirname, '../../dist/assets')
+          from: path.resolve(__dirname, '../static'),
+          to: path.resolve(__dirname, '../dist/static')
         }
       ]),
   ],
